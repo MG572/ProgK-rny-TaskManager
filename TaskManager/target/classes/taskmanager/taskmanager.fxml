@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="taskmanager.TaskManagerApp">
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <TextField fx:id="taskInput" promptText="New Task Name"/>
+            <Button text="Add Task" onAction="#handleAddTask"/>
+            <Button text="Remove Task" onAction="#handleRemoveTask"/>
+            <Button text="Delete All Tasks" onAction="#handleDeleteAllTasks"/>
+        </HBox>
+    </top>
+    <center>
+        <ListView fx:id="listView"/>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="center">
+            <Button text="Sort by Priority" onAction="#sortByPriority"/>
+            <Button text="Sort by Name" onAction="#sortByName"/>
+            <Button text="Sort by Due Date" onAction="#sortByDueDate"/>
+            <Button text="Export Tasks" onAction="#handleExportTasks"/>
+            <Button text="Import Tasks" onAction="#handleImportTasks"/>
+        </HBox>
+    </bottom>
+</BorderPane>

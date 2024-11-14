@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="426.0" prefWidth="321.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="taskmanager.TaskDetailsWindowController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <Label text="Name:" />
+    <TextField fx:id="nameField" />
+
+    <Label text="Description:" />
+    <TextArea fx:id="descriptionArea" />
+
+    <Label text="Due Date:" />
+    <DatePicker fx:id="dueDatePicker" />
+
+    <Label text="Priority:" />
+    <ComboBox fx:id="priorityBox">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <Integer fx:value="1" />
+                <Integer fx:value="2" />
+                <Integer fx:value="3" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <CheckBox fx:id="completedCheckBox" text="Completed" />
+
+    <Button onAction="#handleSave" text="Save" />
+</VBox>
